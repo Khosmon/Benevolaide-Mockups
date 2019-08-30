@@ -1,0 +1,522 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr-fr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr-fr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr-fr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr-fr">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Nouveau bénéficiaire | Bénévolaide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-flatly.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+  <!-- Header Zone -->
+  <header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <span class="navbar-brand hidden-sm">Bénévolaide</span>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span><span class="hidden-md hidden-sm"> Accueil</span></a></li>
+          <li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span><span class="hidden-md hidden-sm"> Tableau de bord</span></a></li>
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bénéficiaires <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="domaineCherche.html"><span class="glyphicon glyphicon-briefcase"></span> Chercher par domaine</a></li>
+              <li><a href="beneficiaireListe.html"><span class="glyphicon glyphicon-list"></span> Liste des bénéficiaires</a></li>
+              <li><a href="beneficiaireEdition.html"><span class="glyphicon glyphicon-plus"></span> Inscrire un bénéficiaire</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bénévoles <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="benevoleListe.html"><span class="glyphicon glyphicon-list"></span> Liste des bénévole</a></li>
+              <li><a href="benevoleEdition.html"><span class="glyphicon glyphicon-plus"></span> Inscrire un bénévole</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left hidden-xs" role="search">
+          <div class="input-group">
+            <input id="headerSearchInput" type="text" class="form-control" placeholder="Rechercher..." required />
+            <span class="input-group-btn">
+              <button type="submit" id="headerSearchButton" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+                <span class="hidden-md hidden-sm hidden-xs"> Rechercher</span>
+              </button>
+            </span>
+          </div>
+        </form>
+        <!-- Left zone -->
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="hidden-sm">Bonjour Simon</span> <span class="glyphicon glyphicon-option-vertical"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="utilisateurProfil.html"><span class="glyphicon glyphicon-user"></span> Mon profil</a></li>
+              <li><a href="apropos.html"><span class="glyphicon glyphicon-info-sign"></span> À propos</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="connexion.html"><span class="glyphicon glyphicon-log-out"></span> Deconnexion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Body zone -->
+  <section class="container">
+    <div class="row">
+      <h2>Inscrire un nouveau bénéficiaire</h2>
+      <p>Utilisez le formulaire ci dessous pour ajouter un bénéficiaire à la base. Les entrées marquées d'une <span class="glyphicon glyphicon-star text-warning"></span> (étoile) sont obligatoires.</p>
+      <form class="form-horizontal" id="beneficiaireForm" method="post" action="beneficiaireProfil.html">
+        <fieldset>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="benevol">Bénévole accueilllant <span class="glyphicon glyphicon-star text-warning"></span></label>
+            <div class="col-sm-4">
+              <select id="benevol" name="benevol" class="form-control input-md" required>
+                <option selected></option>
+                <option value="1">Pierro d'Houin</option>
+                <option value="2" selected>Simon Priet</option>
+                <option value="3">Claudette Dupuis</option>
+                <option value="4">Héloïse Lois</option>
+                <option value="5">Nordin Sedkaoui</option>
+                <option value="6">Daouda Camara</option>
+                <option value="7">Amélie Clark</option>
+              </select>
+              <p class="help-block">Le bénévole accueillant sera désigné comme bénévole en charge du bénéficiaire.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Informations générales</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 col-xs-12 control-label" for="Nom">Nom <span class="glyphicon glyphicon-star text-warning"></span></label>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+              <input id="Prenom" name="Prenom" type="text" placeholder="Prénom" class="form-control input-md" aria-describedby="Prénom du bénévole" required="">
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <input id="Nom" name="Nom" type="text" placeholder="Nom de famille" class="form-control input-md" aria-describedby="Nom de famille du bénévole" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Genre">Genre <span class="glyphicon glyphicon-star text-warning"></span></label>
+            <div class="col-sm-4">
+              <label class="radio-inline" for="homme">
+                <input type="radio" name="Genre" id="homme" value="H" checked required>
+                Homme
+              </label>
+              <label class="radio-inline" for="femme">
+                <input type="radio" name="Genre" id="femme" value="F">
+                Femme
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="DDN">Date de naissance <span class="glyphicon glyphicon-star text-warning"></span></label>
+            <div class="col-sm-4">
+              <div class="input-group">
+                <input id="DDN" name="DDN" class="form-control input-md" placeholder="Date de naissance" type="text" required="">
+                <span class="input-group-addon">JJ/MM/AAAA</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Handicap">Handicapé</label>
+            <div class="col-sm-4">
+              <label class="radio-inline" for="Handicap-0">
+                <input type="radio" name="Handicap" id="Handicap-0" value="0" checked="checked">
+                Non
+              </label>
+              <label class="radio-inline" for="Handicap-1">
+                <input type="radio" name="Handicap" id="Handicap-1" value="1">
+                Oui
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="MinimaSociaux">Revenu minimum</label>
+            <div class="col-sm-4">
+              <label class="radio-inline" for="MinimaSociaux-0">
+                <input type="radio" name="MinimaSociaux" id="MinimaSociaux-0" value="0" checked="checked">
+                Non
+              </label>
+              <label class="radio-inline" for="MinimaSociaux-1">
+                <input type="radio" name="MinimaSociaux" id="MinimaSociaux-1" value="1">
+                Oui
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Moyen de contact</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Telfixe">Téléphone</label>
+            <div class="col-sm-4">
+              <input id="Telfixe" name="Telfixe" type="text" placeholder="Téléphone fixe" class="form-control input-md">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Telmobile">Portable</label>
+            <div class="col-sm-4">
+              <input id="Telmobile" name="Telmobile" type="text" placeholder="Téléphone portable" class="form-control input-md">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="email">Courriel</label>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              <input id="email" name="email" type="text" placeholder="Courriel" class="form-control input-md">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+              <input id="passEmail" name="passEmail" type="password" placeholder="Mot de passe" class="form-control input-md">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Pôle-Emploi</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="APE">Est inscrit au Pôle-Emploi</label>
+            <div class="col-sm-4">
+              <label class="radio-inline" for="APE-1">
+                <input type="radio" name="APE" id="APE-1" value="1" checked="checked" aria-describedby="Possède un compte Pôle-Emploi'">
+                Oui
+              </label>
+              <label class="radio-inline" for="APE-0">
+                <input type="radio" name="APE" id="APE-0" value="0" aria-describedby="Ne possède pas de compte Pôle-Emploi">
+                Non
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="IdentifiantPE">Compte Pôle-Emploi</label>
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              <input id="IdentifiantPE" name="IdentifiantPE" type="text" placeholder="Identifiant du Pôle-Emploi" class="form-control input-md" aria-describedby="Identifiant du compte Pôle-Emploi">
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-12">
+              <input id="passPE" name="passPE" type="password" placeholder="Mot de passe" class="form-control input-md" aria-describedby="Mot de passe du compte Pôle-Emploi">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Recherche</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 col-xs-12 control-label" for="formation1">Formation</label>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+              <select id="formation1" name="formation1" class="form-control input-md">
+                <option value="1">Domaine 1</option>
+                <option value="2">Domaine 2</option>
+              </select>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+              <select id="formation2" name="formation2" class="form-control input-md">
+                <option value="1">Domaine 1</option>
+                <option value="2">Domaine 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 col-xs-12 control-label" for="domaine1">Domaine</label>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+              <select id="domaine1" name="domaine1" class="form-control input-md">
+                <option value="1">Domaine 1</option>
+                <option value="2">Domaine 2</option>
+              </select>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6">
+              <select id="domaine2" name="domaine2" class="form-control input-md">
+                <option value="1">Domaine 1</option>
+                <option value="2">Domaine 2</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="emploiSouhaite">Emploi souhaité</label>
+            <div class="col-sm-4">
+              <input id="emploiSouhaite" name="emploiSouhaite" type="text" placeholder="Emploi souhaité" class="form-control input-md">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Contrat">Nature du contrat</label>
+            <div class="col-sm-4">
+              <select id="Contrat" name="Contrat" class="form-control input-md">
+                <option value="1">Contrat type 1</option>
+                <option value="2">Contrat type 2</option>
+                <option value="3">Contrat type 3</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="TempsPartiel">Temps partiel</label>
+            <div class="col-md-4 col-sm-7">
+              <div class="input-group">
+                <input id="TempsPartiel" name="TempsPartiel" class="form-control input-md" placeholder="Temps de travail minimal en temps partiel" type="text">
+                <span class="input-group-addon">h / semaine</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="StatutEmploi">Statut sur le marché de l'emploi</label>
+            <div class="col-md-5 col-sm-8">
+              <select id="StatutEmploi" name="StatutEmploi" class="form-control input-md">
+                <option value="1">Actif dépendant (Salarié, p.ex. : À temps partiel)</option>
+                <option value="2">En contrat aidé</option>
+                <option value="3">Actif indépendant (Artisan, Commerçant, entrepreneur, artiste, ...)</option>
+                <option value="4">Chômeur</option>
+                <option value="5">Chômeur longue durée (&gt; 12 mois)</option>
+                <option value="6">Inactif, étudiant, retraité</option>
+                <option value="7">Inactif en formation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Mobilité</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Permis">Permis de conduire</label>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label for="Permis-0">
+                  <input type="checkbox" name="Permis" id="Permis-0" value="A">
+                  A (2 roues)
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="Permis-1">
+                  <input type="checkbox" name="Permis" id="Permis-1" value="B">
+                  B (Voiture)
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="Permis-2">
+                  <input type="checkbox" name="Permis" id="Permis-2" value="C">
+                  C (Camion)
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="Permis-3">
+                  <input type="checkbox" name="Permis" id="Permis-3" value="D">
+                  D (Utilitaire)
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Bassin">Bassin de recherche</label>
+            <div class="col-sm-4">
+              <select id="Bassin" name="Bassin" class="form-control">
+                <option value="1">Paris intramuros</option>
+                <option value="2">Ile-de-France</option>
+                <option value="3">France</option>
+                <option value="4">Europe</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Adresse de résidence</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="AAdresse">Domicilié</label>
+            <div class="col-sm-4">
+              <label class="radio-inline" for="AAdresse-1">
+                <input type="radio" name="AAdresse" id="AAdresse-1" value="1" checked="checked">
+                Oui
+              </label>
+              <label class="radio-inline" for="AAdresse-0">
+                <input type="radio" name="AAdresse" id="AAdresse-0" value="0">
+                Non
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Adresse">Adresse postale</label>
+            <div class="col-sm-8">
+              <div class="row">
+                <div class="col-sm-8 col-xs-12">
+                  <input id="Adresse" name="Adresse" type="text" placeholder="Numéro et rue" class="form-control input-md">
+                </div>
+              </div>
+              <br />
+              <div class="row">
+                <div class="col-sm-3 col-xs-3">
+                  <input id="CodePostal" name="CodePostal" type="text" placeholder="Code postal" class="form-control input-md">
+                </div>
+                <div class="col-sm-5 col-xs-9">
+                  <input id="Ville" name="Ville" type="text" placeholder="Ville" class="form-control input-md">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="NatureAdresse">Nature de l'adresse</label>
+            <div class="col-sm-4">
+              <label class="radio-inline" for="NatureAdresse-0">
+                <input type="radio" name="NatureAdresse" id="NatureAdresse-0" value="1" checked="checked">
+                Réelle
+              </label>
+              <label class="radio-inline" for="NatureAdresse-1">
+                <input type="radio" name="NatureAdresse" id="NatureAdresse-1" value="2">
+                Administrative
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="AdressePrioritaire">Spécificité de l'adresse</label>
+            <div class="col-sm-4">
+              <div class="checkbox">
+                <label for="AdressePrioritaire-0">
+                  <input type="checkbox" name="AdressePrioritaire" id="AdressePrioritaire-0" value="1">
+                  Zone Urbaine Sensible
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="AdressePrioritaire-1">
+                  <input type="checkbox" name="AdressePrioritaire" id="AdressePrioritaire-1" value="2">
+                  Zone Franche Urbaine
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="AdressePrioritaire-2">
+                  <input type="checkbox" name="AdressePrioritaire" id="AdressePrioritaire-2" value="">
+                  Contrat Urbain de Cohésion sociale
+                </label>
+              </div>
+              <div class="checkbox">
+                <label for="AdressePrioritaire-3">
+                  <input type="checkbox" name="AdressePrioritaire" id="AdressePrioritaire-3" value="">
+                  Quartier Politique de la Ville
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="migrant">Migrant</label>
+            <div class="col-sm-4">
+              <div class="radio">
+                <label for="migrant-0">
+                  <input type="radio" name="migrant" id="migrant-0" value="0" checked="checked">
+                  Non
+                </label>
+              </div>
+              <div class="radio">
+                <label for="migrant-1">
+                  <input type="radio" name="migrant" id="migrant-1" value="1">
+                  Oui : Communauté européenne
+                </label>
+              </div>
+              <div class="radio">
+                <label for="migrant-2">
+                  <input type="radio" name="migrant" id="migrant-2" value="2">
+                  Oui : Extra-européen
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-md-9 col-xs-12">
+              <h3 class="text-primary">Études</h3>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="EtudeNiveau">Niveau de formation</label>
+            <div class="col-sm-4">
+              <select id="EtudeNiveau" name="EtudeNiveau" class="form-control">
+                <option value="1">Pas de diplôme</option>
+                <option value="2">Brevet des collèges</option>
+                <option value="3">Bac</option>
+                <option value="4">Bac +2</option>
+                <option value="5">Bac +3</option>
+                <option value="6">Bac +5</option>
+                <option value="7">Bac +7</option>
+                <option value="8">Bac +8</option>
+                <option value="9">Au delà</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="Diplome">Dernier diplôme</label>
+            <div class="col-sm-4">
+              <input id="Diplome" name="Diplome" type="text" placeholder="Nom du dernier du diplôme obtenu" class="form-control input-md">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-offset-3 col-md-6">
+              <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <p>Aie, tout ne s'est pas bien passé. Jettez un coup d'oeil aux entrées en rouge.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-sm-4 control-label" for="submitButton"></label>
+            <div class="col-md-8">
+              <button id="submitButton" name="submitButton" class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-floppy-save"></span> Inscrire</button>
+              <button id="updateButton" name="updateButton" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-floppy-saved"></span> Mettre à jour</button>
+              <button id="resetButton" name="resetButton" class="btn btn-default" type="reset"><span class="glyphicon glyphicon-erase"></span> Effacer</button>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </section>
+  <!-- Footer zone -->
+  <footer class="well footer footer-bottom-patch">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <h5 class="text-primary">Remerciement</h5>
+          <ul class="list-unstyled small">
+            <li>Mise en page propulsé par <a href="http://getbootstrap.com/">Bootstrap</a>.</li>
+            <li>Apparence et style fournit par <a href="https://bootswatch.com/">Bootswatch</a>.</li>
+            <li>Scripts motorisé par <a href="https://jquery.com/">jQuery</a>.</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h5 class="text-primary">Termes</h5>
+          <ul class="list-unstyled small">
+            <li>Ce site web est un projet d'étude.</li>
+            <li><a href="#">À propos</a> de Bénévolaide.</li>
+            <li>License <a class="" href="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/legalcode">CC-BY-NC-ND</a> 2016.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /container -->
+  <script src="//code.jquery.com/jquery-2.2.1.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.0.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/ajoutBeneficiaire.js"></script>
+</body>
+</html>

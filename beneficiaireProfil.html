@@ -1,0 +1,656 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="fr-fr"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="fr-fr"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="fr-fr"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="fr-fr">
+<!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Profile de bénéficiaire | Bénévolaide</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+  </style>
+  <link rel="stylesheet" href="css/bootstrap-flatly.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+  <!-- Header Zone -->
+  <header id="TopHeader">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <span class="navbar-brand hidden-sm">Bénévolaide</span>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><span class="glyphicon glyphicon-home"></span><span class="hidden-md hidden-sm"> Accueil</span></a></li>
+          <li><a href="dashboard.html"><span class="glyphicon glyphicon-dashboard"></span><span class="hidden-md hidden-sm"> Tableau de bord</span></a></li>
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bénéficiaires <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="domaineCherche.html"><span class="glyphicon glyphicon-briefcase"></span> Chercher par domaine</a></li>
+              <li><a href="beneficiaireListe.html"><span class="glyphicon glyphicon-list"></span> Liste des bénéficiaires</a></li>
+              <li><a href="beneficiaireEdition.html"><span class="glyphicon glyphicon-plus"></span> Inscrire un bénéficiaire</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bénévoles <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="benevoleListe.html"><span class="glyphicon glyphicon-list"></span> Liste des bénévole</a></li>
+              <li><a href="benevoleEdition.html"><span class="glyphicon glyphicon-plus"></span> Inscrire un bénévole</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-form navbar-left hidden-xs" role="search">
+          <div class="input-group">
+            <input id="headerSearchInput" type="text" class="form-control" placeholder="Rechercher..." required />
+            <span class="input-group-btn">
+              <button type="submit" id="headerSearchButton" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+                <span class="hidden-md hidden-sm hidden-xs"> Rechercher</span>
+              </button>
+            </span>
+          </div>
+        </form>
+        <!-- Left zone -->
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <span class="hidden-sm">Bonjour Simon</span> <span class="glyphicon glyphicon-option-vertical"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="utilisateurProfil.html"><span class="glyphicon glyphicon-user"></span> Mon profil</a></li>
+              <li><a href="apropos.html"><span class="glyphicon glyphicon-info-sign"></span> À propos</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="connexion.html"><span class="glyphicon glyphicon-log-out"></span> Deconnexion</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Body zone -->
+  <!-- Tabs -->
+  <section class="container">
+    <div class="row">
+      <h1 class="text-primary">Delphine <span class="text-smallcase">Sabasti</span></h1>
+      <div class="col-sm-10 col-sm-offset-1">
+        <br />
+        <div class="alert alert-dismissible alert-info">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <h4>Hey !</h4>
+          <p>Cette personne à besoin d'être vérifié. Si tout semble en ordre, vous pouvez la valider : <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Valider</a></p>
+
+        </div>
+      </div>
+    </div>
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active">
+        <a href="#profil" data-toggle="tab">Profil du bénéficiaire</a>
+      </li>
+      <li role="presentation">
+        <a href="#visites" data-toggle="tab">Suivit des visites</a>
+      </li>
+      <li role="presentation">
+        <a href="#fichiers" data-toggle="tab">Dossier personnel</a>
+      </li>
+    </ul>
+  </section>
+  <!-- Tabs contents -->
+  <section id="myTabContent" class="container tab-content">
+    <!-- Tab Infos -->
+    <div class="tab-pane fade active in" id="profil">
+      <div class="top-right-button-group">
+        <menu class="btn-group-vertical" role="group">
+          <!-- <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Valider</a>
+          <a href="#" class="btn btn-warning"><span class="glyphicon glyphicon-record"></span> Douter</a>-->
+          <a href="#" class="btn btn-success"><span class="glyphicon glyphicon glyphicon-file"></span> Exporter en PDF</a>
+          <a href="beneficiaireEdition.html" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Modifier</a>
+          <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span> Supprimer</a>
+        </menu>
+      </div>
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Informations générales</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">Nom</strong>
+        <span class="col-sm-4">Delphine Sabasti</span>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">Genre</strong>
+        <span class="col-sm-4">Femme</span>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">Date de naissance</strong>
+        <span class="col-sm-4">12/05/1985</span>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Moyen de contact</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Courriel
+        </strong>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:delphine.sabasti@laposte.net">delphine.sabasti@laposte.net</a>
+          <br />
+          <span class="glyphicon glyphicon-lock"></span> ●●●●●●● <a href="#" title="Révéler le mot de passe" class=""><span class="glyphicon glyphicon-eye-open"></span></a>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Portable
+        </strong>
+        <div class="col-sm-4">
+          <a href="tel:0123456789">01 23 45 67 89</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Pôle-Emploi</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Est inscrit(e) au Pôle-Emploi
+        </strong>
+        <div class="col-sm-4">
+          Oui
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Compte Pôle-Emploi
+        </strong>
+        <div class="col-sm-4">
+          <span class="glyphicon glyphicon-user"></span> DelphineSabasti1
+          <br />
+          <span class="glyphicon glyphicon-lock"></span> ●●●●●●● <a href="#" title="Révéler le mot de passe" class=""><span class="glyphicon glyphicon-eye-open"></span></a>
+          <br />
+          <a href="https://candidat.pole-emploi.fr/candidat/espacepersonnel/authentification/" target="_blank"><span class="glyphicon glyphicon-share"></span> Se connecter au Pôle-Emploi</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Recherche</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Formation
+        </strong>
+        <div class="col-sm-4">
+          Domaine 2, Domaine 1
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Domaine
+        </strong>
+        <div class="col-sm-4">
+          Domaine 2, Domaine 1
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Emploi souhaité
+        </strong>
+        <div class="col-sm-4">
+          Conciergerie
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Nature du contrat
+        </strong>
+        <div class="col-sm-4">
+          Contrat type 2
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Temps partiel
+        </strong>
+        <div class="col-sm-4">
+          20 h/semaine
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Statut sur le marché de l'emploi
+        </strong>
+        <div class="col-sm-4">
+          Chômeur longue durée (>12 mois)
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Informations générales</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Bassin de recherche
+        </strong>
+        <div class="col-sm-4">
+          Paris intramuros
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Adresse de résidence</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Domicilié(e)
+        </strong>
+        <div class="col-sm-4">
+          Non
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Migrant
+        </strong>
+        <div class="col-sm-4">
+          Oui : Communauté européenne
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-3 col-md-9 col-xs-12">
+          <h3 class="text-primary">Études</h3>
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Niveau de formation
+        </strong>
+        <div class="col-sm-4">
+          Bac
+        </div>
+      </div>
+      <div class="row">
+        <strong class="col-sm-4 text-right">
+          Dernier diplôme obtenu
+        </strong>
+        <div class="col-sm-4">
+          STG Maintenance des locaux
+        </div>
+      </div>
+      <br />
+      <br />
+    </div>
+    <!-- Tab Visites -->
+    <div class="tab-pane fade in" id="visites">
+      <div class="top-right-button-group">
+        <menu class="btn-group-vertical" role="group">
+          <a href="#" class="btn btn-default" id="ShowAddVisitForm">Ajouter une visite</a>
+        </menu>
+      </div>
+      <!-- En bref -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>En bref</h3>
+          <div class="panel-body">
+            <form class="form-horizontal" id="beneficiaireForm" method="post">
+              <fieldset>
+                <div class="form-group">
+                  <label class="col-sm-4 control-label" for="benevol">Bénévole en charge</label>
+                  <div class="col-md-6 col-sm-8">
+                    <div class="input-group">
+                      <select id="benevol" name="benevol" class="form-control input-sm" required>
+                        <option value="1">Pierro d'Houin</option>
+                        <option value="2" selected>Simon Priet</option>
+                        <option value="3">Claudette Dupuis</option>
+                        <option value="4">Héloïse Lois</option>
+                        <option value="5">Nordin Sedkaoui</option>
+                        <option value="6">Daouda Camara</option>
+                        <option value="7">Amélie Clark</option>
+                      </select>
+                      <span class="input-group-btn">
+                        <button id="submitButton" name="submitButton" class="btn btn-default btn-sm" type="submit">
+                          <span class="glyphicon glyphicon-arrow-right"></span>
+                          <span class="hidden-md"> Changer</span>
+                        </button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <div class="row">
+              <strong class="col-sm-4 text-right">Inscription</strong>
+              <span class="col-sm-4">10/01/2000</span>
+            </div>
+            <div class="row">
+              <strong class="col-sm-4 text-right">Nombre de visites</strong>
+              <span class="col-sm-4">3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Ajouter une visite -->
+      <div class="row" id="AddVisitForm">
+        <div class="col-xs-12">
+          <h3>Ajouter une visite</h3>
+          <form class="form-horizontal well">
+            <!-- Row bouttons -->
+            <div class="form-group row">
+              <div id="top-right-floating-group" class="btn-group" role="group">
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Ajouter cette visite</button>
+                <a id="HideAddVisitForm" class="btn btn-danger" href="#"><span class="glyphicon glyphicon-remove"></span></a>
+              </div>
+              <div class="">Utilisez ce formulaire pour ajouter une visite de ce bénéficiaire. Les entrées marquées d'une <span class="glyphicon glyphicon-star text-warning"></span> (étoile) sont obligatoires.</div>
+            </div>
+            <!-- Row Date + Bénévole -->
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <label for="today" class="control-label col-md-5">Date de la visite <span class="glyphicon glyphicon-star text-warning"></span></label>
+                <div class="col-md-7">
+                  <input type="date" id="today" name="today" class="form-control col-sm-4" />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="benevole" class="control-label col-md-5">Bénévole accueillant <span class="glyphicon glyphicon-star text-warning"></span></label>
+                <div class="col-md-7">
+                  <select id="benevole" name="benevole" class="form-control" required>
+                    <option value="1">Pierro d'Houin</option>
+                    <option value="2" selected>Simon Priet</option>
+                    <option value="3">Claudette Dupuis</option>
+                    <option value="4">Héloïse Lois</option>
+                    <option value="5">Nordin Sedkaoui</option>
+                    <option value="6">Daouda Camara</option>
+                    <option value="7">Amélie Clark</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Row Checkboxes -->
+            <div class="form-group row">
+              <label for="activity-1" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-1" value="1">
+                Curicullum Vitae
+              </label>
+              <label for="activity-2" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-2" value="2">
+                Lettre de motivation
+              </label>
+              <label for="activity-3" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-3" value="3">
+                Candidature Pôle-Emploi
+              </label>
+              <label for="activity-4" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-4" value="4">
+                Autre candidature
+              </label>
+              <label for="activity-5" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-5" value="5">
+                Soutien moral
+              </label>
+              <label for="activity-6" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-6" value="6">
+                Recherche d'emploi
+              </label>
+              <label for="activity-7" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-7" value="7">
+                Recherche de lieu
+              </label>
+              <label for="activity-8" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-8" value="8">
+                Achat
+              </label>
+              <label for="activity-9" class="col-md-3 col-sm-4 col-xs-6">
+                <input type="checkbox" name="activities" id="activity-9" value="9">
+                Autre
+              </label>
+            </div>
+            <!-- Row Textarea commentaire -->
+            <div class="form-group row">
+              <div class="col-lg-offset-2 col-lg-8 col-sm-offset-1 col-sm-10 col-xs-12">
+                <textarea class="form-control" id="textarea" name="textarea" placeholder="Commentaire" rows="4"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Historique des visites -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h3>Ses visites</h3>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="list-inline">
+                <li><h2 class="text-info"><span class="glyphicon glyphicon-calendar"></span>25/02/2016</h2></li>
+                <li><h3><span class="label label-default">Simon Priet</span></h3></li>
+              </ul>
+            </div>
+            <div class="col-md-9">
+              <div class="well">
+                <h4>
+                  <span class="label label-success">Curriculum Vitae</span>
+                  <span class="label label-success">Lettre de motivation</span>
+                  <span class="label label-success">Candidature Pôle-Emploi</span>
+                </h4>
+                <div class="panel panel-success">
+                  <div class="panel-body">
+                    <p>Rédaction d'un CV, relecture et correction d'une lettre de motivation, candidature sur une offre d'agent de surface pour la Mairie de Paris.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="list-inline">
+                <li><h2 class="text-info"><span class="glyphicon glyphicon-calendar"></span>11/07/2013</h2></li>
+                <li><h3><span class="label label-default">Simon Priet</span></h3></li>
+              </ul>
+            </div>
+            <div class="col-md-9">
+              <div class="well">
+                <h4>
+                  <span class="label label-success">Lettre de motivation</span>
+                </h4>
+                <div class="panel panel-success">
+                  <div class="panel-body">
+                    <p>Rédaction d'une lettre de motivation et discussion autour d'un café.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="list-inline">
+                <li><h2 class="text-info"><span class="glyphicon glyphicon-calendar"></span>10/01/2000</h2></li>
+                <li><h3><span class="label label-default">Simon Priet</span></h3></li>
+              </ul>
+            </div>
+            <div class="col-md-9">
+              <div class="well">
+                <h4>
+                  <span class="label label-info">Inscription</span>
+                  <span class="label label-success">Soutien moral</span>
+                  <span class="label label-success">Recherche d'emploi</span>
+                  <span class="label label-success">Curicullum Vitae</span>
+                  <span class="label label-success">Lettre de motivation</span>
+                </h4>
+                <div class="panel panel-success">
+                  <div class="panel-body">
+                    <p>Inscription sur Bénévolaide, discussion (elle est bavarde !) et recherche d'emploi.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title"></h3>
+            </div>
+
+            <ul class="list-group">
+              <li class="list-group-item">
+                <h3 class="">
+                  25/02/2016
+                  <span class="label label-default">Simon Priet</span>
+                </h3>
+                <br />
+                <span class="label label-success">Curriculum Vitae</span>
+                <span class="label label-success">Lettre de motivation</span>
+                <span class="label label-success">Candidature Pôle-Emploi</span>
+                <br />
+                <br />
+                <div class="well well-sm">
+                  <p class="list-group-item-text">Rédaction d'un CV, relecture et correction d'une lettre de motivation, candidature sur une offre d'agent de surface pour la Mairie de Paris.</p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <h3 class="">
+                  11/07/2013
+                  <span class="label label-default">Simon Priet</span>
+                </h3>
+                <br />
+                <span class="label label-success">Lettre de motivation</span>
+                <br />
+                <br />
+                <div class="well">
+                  <p class="list-group-item-text">
+                    Rédaction d'une lettre de motivation et discussion autour d'un café.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <h3 class="">
+                  10/01/2000
+                  <span class="label label-default">Simon Priet</span>
+                </h3>
+                <span class="label label-success">Inscription</span>
+                <br />
+                <br />
+                <div class="well">
+                  <p class="list-group-item-text">Inscription sur Bénévolaide, discussion (elle est bavarde !) et recherche d'emploi.</p>
+                </div>
+              </li>
+            </ul>
+          </div>-->
+        </div>
+      </div>
+    </div>
+    <!-- Tab Fichiers -->
+    <div id="fichiers" class="tab-pane fade in">
+      <h3>Fichiers du bénéficiaires <span class="label label-info">4</span></h3>
+      <div class="container">
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU1ZjJiMDliYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTVmMmIwOWJiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading">Curriculum Vitae</h5>
+              <span class="text-muted small"><span class="glyphicon glyphicon-pencil"></span> 10/02/2017 17:20</span><br />
+              <span class="text-muted small"><span class="glyphicon glyphicon-asterisk"></span> 10/02/2017 17:20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU1ZjJiMDliYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTVmMmIwOWJiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading">Curriculum Vitae</h5>
+              <span class="text-muted small"><span class="glyphicon glyphicon-pencil"></span> 10/02/2017 17:20</span><br />
+              <span class="text-muted small"><span class="glyphicon glyphicon-asterisk"></span> 10/02/2017 17:20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU1ZjJiMDliYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTVmMmIwOWJiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading">Curriculum Vitae</h5>
+              <span class="text-muted small"><span class="glyphicon glyphicon-pencil"></span> 10/02/2017 17:20</span><br />
+              <span class="text-muted small"><span class="glyphicon glyphicon-asterisk"></span> 10/02/2017 17:20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU1ZjJiMDliYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTVmMmIwOWJiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading">Curriculum Vitae</h5>
+              <span class="text-muted small"><span class="glyphicon glyphicon-pencil"></span> 10/02/2017 17:20</span><br />
+              <span class="text-muted small"><span class="glyphicon glyphicon-asterisk"></span> 10/02/2017 17:20</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvNjR4NjQKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNTU1ZjJiMDliYiB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1NTVmMmIwOWJiIj48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxNC41IiB5PSIzNi41Ij42NHg2NDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" data-holder-rendered="true" style="width: 64px; height: 64px;">
+            </div>
+            <div class="media-body">
+              <h5 class="media-heading">Curriculum Vitae</h5>
+              <span class="text-muted small"><span class="glyphicon glyphicon-pencil"></span> 10/02/2017 17:20</span><br />
+              <span class="text-muted small"><span class="glyphicon glyphicon-asterisk"></span> 10/02/2017 17:20</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <h4>Chemin</h4>
+      <p>~\Bénéficiaires\Sabasti Delphine\</p>
+      <a class="btn btn-sm btn-default" href="javascript:window.open('file://C:\');"><span class="glyphicon glyphicon-folder-open"> </span> Parcourir...</a>
+      <a class="btn btn-sm btn-default" href="#"><span class="glyphicon glyphicon-folder-open"> </span> Changer...</a>
+      <br />
+    </div>
+  </section>
+  <!-- Footer zone -->
+  <footer class="well footer footer-bottom-patch">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <h5 class="text-primary">Remerciement</h5>
+          <ul class="list-unstyled small">
+            <li>Mise en page propulsé par <a href="http://getbootstrap.com/">Bootstrap</a>.</li>
+            <li>Apparence et style fournit par <a href="https://bootswatch.com/">Bootswatch</a>.</li>
+            <li>Scripts motorisé par <a href="https://jquery.com/">jQuery</a>.</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h5 class="text-primary">Termes</h5>
+          <ul class="list-unstyled small">
+            <li>Ce site web est un projet d'étude.</li>
+            <li><a href="#">À propos</a> de Bénévolaide.</li>
+            <li>License <a class="" href="http://creativecommons.org/licenses/by-nc-nd/3.0/fr/legalcode">CC-BY-NC-ND</a> 2016.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /container -->
+  <script src="//code.jquery.com/jquery-2.2.1.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.0.js"><\/script>')</script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/beneficiaireProfil.js"></script>
+</body>
+</html>
