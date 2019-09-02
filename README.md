@@ -1,4 +1,10 @@
-# Benevolaide
-Site web de gestion de bénévoles et de chomeurs pour association
+# Benevolaide Project
 
-Ce projet ne contient que du code client sous forme de code HTML, CSS et JS. Certain outils ne supportent pas les appels sous forme file://, aussi, pour le faire fonctionner correctement, placez le dans un projet de serveur comme easyPHP, WAMP ou apache.
+## Benevolaide Mockups
+
+Mockups of the Benevolaide website. They focus on visual, ergonomics and usability, and structurate the website with examples of specific webpages.
+This project only contains client-side code like HTML, CSS and a little Javascript. Some tools (like web browsers) doesn't support calls to files://, thus, to make the mockup works correclty, you can setup it in a server environment like easyPHP, WAMP, apache.  
+
+## What is Benevolaide?
+
+Benevolaide is a volunteer and beneficiary management website. It aims to help the team of the Secours Populaire Français to keep tracks of its beneficiaries while they help them search for job, create CV and LM. It keep an hystory of volunteer actions and meetings.  
